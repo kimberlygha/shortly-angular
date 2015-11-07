@@ -8,7 +8,8 @@
       </ul>
     </nav>
   </header>
-  <div class="link" ng-repeat="link in data">
+  <input ng-model='filter' class='filter' placeholder='filter your search'>
+  <div class="link" ng-repeat="link in data | filter:filter">
     <img src="./assets/redirect_icon.png"/>
     <div class="info">
       <div class="visits"><span class="count">{{link.visits}}</span>Visits</div>
