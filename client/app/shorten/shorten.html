@@ -1,10 +1,18 @@
 <div id='container'>
 <!-- Your code here -->
   <h2>Shorten your link</h2>
-  <form class='creator'>
-    <input ng-model='input'>
-    <button ng-click='addLink()'>submit</button>
+  <form name='url' class='creator' nonvalidate>
+    <input ng-model='input' type='url' required>
+    <button ng-click='addLink()' ng-disabled="url.$invalid">submit</button>
   </form>
+  <div ng-show='post' class='link'>
+    <img src="./assets/redirect_icon.png"/>
+    <div class="info">
+      <div class="visits"><span class="count">{{post.visits}}</span>Visits</div>
+      <div class="title">{{post.title}}</div>
+      <div class="original">{{post.url}}</div>
+      <a href='{{post.base_url}}/api/links/{{post.code}}'>{{post.base_url}}/{{post.code}}</a>
+    </div></div>
 </div>
 
 

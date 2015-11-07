@@ -6,9 +6,8 @@ angular.module('shortly.shorten', [])
   $scope.addLink = function () {
     $scope.link.url = $scope.input;
     Links.createLink($scope.link).then(function (link) {
-      console.log('im getting past this step ');
+      $scope.post = link;
       $scope.input = '';
-      return link.data;
     });
   };
 });

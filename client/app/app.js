@@ -24,11 +24,10 @@ angular.module('shortly', [
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
     })
-    .when('api/links/*', {
-      templateUrl: 'app/shorten/shorten.html',
-      controller: 'ShortenController'
+    .otherwise({
+      templateUrl: 'app/links/links.html',
+      controller: 'LinksController'
     });
-    // .when('',{// create a catch all that navigates back to home
 
     // })
     // We add our $httpInterceptor into the array
