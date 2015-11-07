@@ -6,7 +6,9 @@ angular.module('shortly.links', [])
   $scope.getLinks = function ( ) {
     Links.getLink().then(function (links) {
       console.log('These are the links we getting', links);
-      $scope.data = links;
+      $scope.data = links.sort(function (a,b) {
+        return b.visits - a.visits;
+      });
     });
   };
 });
