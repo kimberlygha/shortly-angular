@@ -8,6 +8,7 @@ angular.module('shortly.shorten', [])
     Links.createLink($scope.link).then(function (link) {
       $scope.input = '';
       if (link.url) {
+        $scope.error = null;
         $scope.post = link;
       } else {
         $scope.error = 'Please enter a valid URL';
