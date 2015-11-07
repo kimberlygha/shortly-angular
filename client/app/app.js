@@ -27,7 +27,7 @@ angular.module('shortly', [
     .when('api/links/*', {
       templateUrl: 'app/shorten/shorten.html',
       controller: 'ShortenController'
-    })
+    });
     // .when('',{// create a catch all that navigates back to home
 
     // })
