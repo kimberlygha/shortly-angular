@@ -12,7 +12,9 @@
       <div class="title">{{post.title}}</div>
       <div class="original">{{post.url}}</div>
       <a href='{{post.base_url}}/api/links/{{post.code}}'>{{post.base_url}}/{{post.code}}</a>
-    </div></div>
+    </div>
+  </div>
+  <div ng-show='error'>{{error}}</div>
 </div>
 
 
