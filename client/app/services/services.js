@@ -21,7 +21,7 @@ var createLink = function (link) {
   .then(function (resp) {
     console.log(resp);
     return resp.data;
-  },function (error) {
+  }, function (error) {
     console.log('There was an error logging your link');
     return error;
   });
