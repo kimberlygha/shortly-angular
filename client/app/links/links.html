@@ -1,4 +1,13 @@
 <div id="container" ng-init="getLinks()">
+  <header>
+    <h1>Shortly</h1>
+    <nav class="navigation">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#links">Links</a></li>
+        <li><a href="#shorten">Shorten</a></li>
+      </ul>
+    </nav>
+  </header>
   <div class="link" ng-repeat="link in data">
     <img src="./assets/redirect_icon.png"/>
     <div class="info">
